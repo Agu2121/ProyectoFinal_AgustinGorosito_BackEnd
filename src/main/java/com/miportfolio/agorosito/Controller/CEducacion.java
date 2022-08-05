@@ -1,4 +1,3 @@
-
 package com.miportfolio.agorosito.Controller;
 
 import com.miportfolio.agorosito.Dto.dtoEducacion;
@@ -48,7 +47,7 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
         sEducacion.delete(id);
-        return new ResponseEntity(new Mensaje("producto eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }
     
     @PostMapping("/create")
