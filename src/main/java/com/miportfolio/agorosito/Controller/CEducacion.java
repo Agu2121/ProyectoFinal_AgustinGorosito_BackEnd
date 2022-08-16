@@ -60,7 +60,7 @@ public class CEducacion {
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
         
-        Educacion educacion = new Educacion(dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE());
+        Educacion educacion = new Educacion(dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE(), dtoeducacion.getFechaInicioE(), dtoeducacion.getFechaFinE(), dtoeducacion.getImgE());
         sEducacion.save(educacion);{    
         return new ResponseEntity(new Mensaje("Educacion agregada"), HttpStatus.OK);
     }
@@ -83,6 +83,10 @@ public class CEducacion {
         
         educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
+        educacion.setFechaInicioE(dtoeducacion.getFechaInicioE());
+        educacion.setFechaFinE(dtoeducacion.getFechaFinE());
+        educacion.setImgE(dtoeducacion.getImgE());
+        
         
         sEducacion.save(educacion);
         

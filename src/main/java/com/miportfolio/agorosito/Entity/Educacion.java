@@ -12,15 +12,21 @@ public class Educacion {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private int fechaInicioE;
+    private int fechaFinE;
+    private String imgE;
     
     //Constructores
 
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String descripcionE) {
+    public Educacion(String nombreE, String descripcionE, int fechaInicioE, int fechaFinE, String imgE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.fechaInicioE = fechaInicioE;
+        this.fechaFinE = fechaFinE;
+        this.imgE = imgE;
     }
     
     //Getters and Setters
@@ -48,5 +54,31 @@ public class Educacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
+
+    public int getFechaInicioE() {
+        return fechaInicioE;
+    }
+
+    public void setFechaInicioE(int fechaInicioE) {
+        this.fechaInicioE = fechaInicioE;
+    }
+
+    public int getFechaFinE() {
+        return fechaFinE;
+    }
+
+    public void setFechaFinE(int fechaFinE) {
+        this.fechaFinE = fechaFinE;
+    }
+
+    public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
+    }
+
+    
     
 }

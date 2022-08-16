@@ -8,15 +8,24 @@ public class dtoEducacion {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private int fechaInicioE;
+    @NotBlank
+    private int fechaFinE;
+    @NotBlank
+    private String imgE;
     
     //Constructores
 
     public dtoEducacion() {
     }
 
-    public dtoEducacion(String nombreE, String descripcionE) {
+    public dtoEducacion(String nombreE, String descripcionE, int fechaInicioE, int fechaFinE, String imgE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.fechaInicioE = fechaInicioE;
+        this.fechaFinE = fechaFinE;
+        this.imgE = imgE;
     }
     
     //Getters and Setters
@@ -35,6 +44,30 @@ public class dtoEducacion {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+
+    public int getFechaInicioE() {
+        return fechaInicioE;
+    }
+
+    public void setFechaInicioE(int fechaInicioE) {
+        this.fechaInicioE = fechaInicioE;
+    }
+
+    public int getFechaFinE() {
+        return fechaFinE;
+    }
+
+    public void setFechaFinE(int fechaFinE) {
+        this.fechaFinE = fechaFinE;
+    }
+
+    public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
     }
     
 }
