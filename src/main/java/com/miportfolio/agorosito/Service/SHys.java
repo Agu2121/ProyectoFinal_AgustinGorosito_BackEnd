@@ -12,34 +12,34 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class SHys {
 
-    @Autowired
-    RHys rHys;
+@Autowired
+    RHys rHabilidades;
 
     public List<Hys> list() {
-        return rHys.findAll();
+        return rHabilidades.findAll();
     }
 
     public Optional<Hys> getOne(int id) {
-        return rHys.findById(id);
+        return rHabilidades.findById(id);
     }
 
-    public Optional<Hys> getByNombreHys(String nombreHys) {
-        return rHys.findByNombreHys(nombreHys);
+    public Optional<Hys> getByNombreH(String nombreH) {
+        return rHabilidades.findByNombreH(nombreH);
     }
 
-    public void save(Hys hys) {
-        rHys.save(hys);
+    public void save(Hys Habilidad) {
+        rHabilidades.save(Habilidad);
     }
 
     public void delete(int id) {
-        rHys.deleteById(id);
+        rHabilidades.deleteById(id);
     }
 
     public boolean existsById(int id) {
-        return rHys.existsById(id);
+        return rHabilidades.existsById(id);
     }
 
-    public boolean existsByNombreHys(String nombreHys) {
-        return rHys.existsByNombreHys(nombreHys);
+    public boolean existsByNombreH(String nombreH) {
+        return rHabilidades.existsByNombreH(nombreH);
     }
 }

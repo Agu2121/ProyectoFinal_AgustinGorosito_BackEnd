@@ -5,36 +5,45 @@ import javax.validation.constraints.NotBlank;
 
 public class dtoHys {
     @NotBlank
-    private String nombreHys;
+    private String nombreH;
     @NotBlank
-    private String porcentajeHys;
-    
-    //Constructores
+    private String porcentajeH;
+    @NotBlank
+    private String imagenH;
 
+    //Contructores
     public dtoHys() {
     }
 
-    public dtoHys(String nombreHys, String porcentajeHys) {
-        this.nombreHys = nombreHys;
-        this.porcentajeHys = porcentajeHys;
-    }
-    
-    //Getters and Setters
-
-    public String getNombreHys() {
-        return nombreHys;
+    public dtoHys(String nombreH, String porcentajeH, String imagenH) {
+        this.nombreH = nombreH;
+        this.porcentajeH = porcentajeH;
+        this.imagenH = imagenH;
     }
 
-    public void setNombreHys(String nombreHys) {
-        this.nombreHys = nombreHys;
+    // Getters and setters
+    public String getNombreH() {
+        return nombreH;
     }
 
-    public String getPorcentajeHys() {
-        return porcentajeHys;
+    public void setNombreH(String nombreH) {
+        this.nombreH = nombreH;
     }
 
-    public void setPorcentajeHys(String porcentajeHys) {
-        this.porcentajeHys = porcentajeHys;
+    public String getPorcentajeH() {
+        return porcentajeH;
     }
-    
+
+    public void setPorcentajeH(String porcentajeH) {
+        this.porcentajeH = porcentajeH;
+    }
+
+    public String getImagenH() {
+        return imagenH;
+    }
+
+    public void setImagenH(String imagenH) {
+        this.imagenH = imagenH;
+    }
+ 
 }
