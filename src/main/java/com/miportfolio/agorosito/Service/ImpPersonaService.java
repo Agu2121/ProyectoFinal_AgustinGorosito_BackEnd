@@ -11,17 +11,20 @@ import org.springframework.stereotype.Service;
 public class ImpPersonaService implements IPersonaService{
     @Autowired IPersonaRepository ipersonaRepository;
 
+    //Traer lista de personas
     @Override
     public List<Persona> getPersona() {
         List<Persona> persona = ipersonaRepository.findAll();
         return persona;
     }
 
+    //Guardar persona
     @Override
     public void savePersona(Persona persona) {
         ipersonaRepository.save(persona);
     }
 
+    //Eliminar persona
     @Override
     public void deletePersona(Long id) {
         ipersonaRepository.deleteById(id);
