@@ -31,5 +31,8 @@ public class Persona {
     private String descripcion; 
     
     @Size(min = 1, max = 255, message = "No cumple con la longitud requerida")
-    private String puesto; 
+    private String puesto;
+    
+    @Size(min = 1, max = 455, message = "No cumple con la longitud requerida")
+    private String banner; 
 }
