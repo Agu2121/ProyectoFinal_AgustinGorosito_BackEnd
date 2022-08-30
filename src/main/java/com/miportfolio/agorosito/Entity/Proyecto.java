@@ -13,6 +13,7 @@ public class Proyecto {
     private String nombreP;
     private String descripcionP;
     private String imgP;
+    private String repoUrl;
 
 
 //Constructores
@@ -20,9 +21,11 @@ public class Proyecto {
     public Proyecto() {
     }
 
-    public Proyecto(String nombreP, String descripcionP) {
+    public Proyecto(String nombreP, String descripcionP, String imgP, String repoUrl) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
+        this.imgP = imgP;
+        this.repoUrl = repoUrl;
     }
     
     //Getters and Setters
@@ -58,8 +61,14 @@ public class Proyecto {
     public void setImgP(String imgP) {
         this.imgP = imgP;
     }
-
     
+    public String getRepoUrl() {
+        return repoUrl;
+    }
+
+    public void setRepoUrl(String repoUrl) {
+        this.repoUrl = repoUrl;
+    }  
     
     
 }

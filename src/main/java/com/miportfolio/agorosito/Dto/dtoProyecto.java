@@ -10,6 +10,8 @@ public class dtoProyecto {
     private String descripcionP;
     @NotBlank 
     private String imgP;
+    @NotBlank
+    private String repoUrl;
 
 
     //Constructores
@@ -17,10 +19,11 @@ public class dtoProyecto {
     public dtoProyecto() {
     }
 
-    public dtoProyecto(String nombreP, String descripcionP, String imgP) {
+    public dtoProyecto(String nombreP, String descripcionP, String imgP, String repoUrl) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
         this.imgP = imgP;
+        this.repoUrl = repoUrl;
     }
     
     //Getters and Setters
@@ -49,5 +52,12 @@ public class dtoProyecto {
         this.imgP = imgP;
     }
     
-    
+    public String getRepoUrl() {
+        return repoUrl;
+    }
+
+    public void setRepoUrl(String repoUrl) {
+        this.repoUrl = repoUrl;
+    } 
+   
 }

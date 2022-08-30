@@ -47,7 +47,7 @@ public class CProyecto {
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
         sProyecto.delete(id);
-        return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto eliminado"), HttpStatus.OK);
     }
     
     @PostMapping("/create")
@@ -57,10 +57,10 @@ public class CProyecto {
         if(sProyecto.existsByNombreP(dtoproyecto.getNombreP()))
             return new ResponseEntity(new Mensaje("Ese proyecto ya existe"), HttpStatus.BAD_REQUEST);
         
-        Proyecto proyecto = new Proyecto(dtoproyecto.getNombreP(), dtoproyecto.getDescripcionP());
+        Proyecto proyecto = new Proyecto(dtoproyecto.getNombreP(), dtoproyecto.getDescripcionP(), dtoproyecto.getImgP(), dtoproyecto.getRepoUrl());
         sProyecto.save(proyecto);
         
-        return new ResponseEntity(new Mensaje("Educacion agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto agregado"), HttpStatus.OK);
     }
     
         @PutMapping("/update/{id}")
@@ -83,6 +83,7 @@ public class CProyecto {
         proyecto.setNombreP(dtoproyecto.getNombreP());
         proyecto.setDescripcionP(dtoproyecto.getDescripcionP());
         proyecto.setImgP((dtoproyecto.getImgP()));
+        proyecto.setRepoUrl((dtoproyecto.getRepoUrl()));
         
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
